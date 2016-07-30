@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RankingAtletes.Model
 {
@@ -11,11 +12,15 @@ namespace RankingAtletes.Model
         public int CantidadParticipantes { get; set; }
 
         [Required]
-        public Medida Medida { get; set; }
+        public long MedidaId { get; set; }
 
         [Required]
-        public Pista Pista { get; set; }
+        public long PistaId { get; set; }
 
+        [ForeignKey("MedidaId")]
+        public virtual Medida Medida { get; set; }
 
+        [ForeignKey("PistaId")]
+        public virtual Pista Pista { get; set; }
     }
 }

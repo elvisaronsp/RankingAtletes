@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RankingAtletes.Model
 {
@@ -10,9 +11,12 @@ namespace RankingAtletes.Model
 
         [Required]
         public DateTime FechaNacimiento { get; set; }
-        
+
         [Required]
-        public Genero Genero { get; set; }
+        public long GeneroId { get; set; }
+
+        [ForeignKey("GeneroId")]
+        public virtual Genero Genero { get; set; }
 
     }
 }
