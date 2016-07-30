@@ -52,6 +52,12 @@
     <Compile Include="Common\EntityService.cs" />
     <Compile Include="Common\IEntityService.cs" />
     <Compile Include="Common\IService.cs" />
+    <Compile Include="AtletaService.cs" />
+    <Compile Include="MarcaService.cs" />
+    <Compile Include="PruebaService.cs" />
+    <Compile Include="MedidaService.cs" />
+    <Compile Include="PistaService.cs" />
+    <Compile Include="GeneroService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
